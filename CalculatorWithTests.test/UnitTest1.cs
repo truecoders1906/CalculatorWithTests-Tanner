@@ -47,13 +47,13 @@ namespace CalculatorWithTests.test
         }
 
         [Theory]
-        [InlineData(3, 2, 6)]
-        [InlineData(6, 6, 36)]
+        [InlineData(100, 10, 1000)]
+        [InlineData(50, 5, 250)]
         [InlineData(9, 9, 81)]
         [InlineData(-10, 0, 0)]
         [InlineData(10, -10, -100)]
         [InlineData(-12, -12, 144)]
-        [InlineData(15, -10, -150)]
+        [InlineData(150, -10, -1500)]
         public void ShouldMultiply(decimal num5, decimal num6, decimal expected)
         {
             //Arrange
@@ -70,7 +70,7 @@ namespace CalculatorWithTests.test
         [InlineData(25000, 1000, 25)]
         [InlineData(160, 16, 10)]
         [InlineData(99, 33, 3)]
-        [InlineData(-100, 0, 0)]
+        [InlineData(0, 100000, 0)]
         [InlineData(-120000, 1, -120000)]
         [InlineData(-150, 5, -30)]
         [InlineData(-200000, 1000, -200)]
@@ -81,6 +81,24 @@ namespace CalculatorWithTests.test
 
             //Act
             decimal actual = Calculator.Divide(num7, num8);
+
+            //Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [InlineData(8, 40320)]
+        [InlineData(5, 120)]
+        [InlineData(1, 1)]
+        [InlineData(2, 2)]
+        [InlineData(0, 1)]
+        public void ShouldFactorial(int num9, int expected)
+        {
+            //Arrange
+            Calculator calculator = new Calculator();
+
+            //Act
+            decimal actual = Calculator.Factorial(num9);
 
             //Assert
             Assert.Equal(expected, actual);
