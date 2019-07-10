@@ -66,5 +66,25 @@ namespace CalculatorWithTests.test
             Assert.Equal(expected, actual);
         }
 
+        [Theory]
+        [InlineData(25000, 1000, 25)]
+        [InlineData(160, 16, 10)]
+        [InlineData(99, 33, 3)]
+        [InlineData(-100, 0, 0)]
+        [InlineData(-120000, 1, -120000)]
+        [InlineData(-150, 5, -30)]
+        [InlineData(-200000, 1000, -200)]
+        public void ShouldDivide(decimal num7, decimal num8, decimal expected)
+        {
+            //Arrange
+            Calculator calculator = new Calculator();
+
+            //Act
+            decimal actual = Calculator.Divide(num7, num8);
+
+            //Assert
+            Assert.Equal(expected, actual);
+        }
+
     }
 }
