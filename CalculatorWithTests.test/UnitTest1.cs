@@ -34,13 +34,13 @@ namespace CalculatorWithTests.test
         [InlineData(0, 0, 0)]
         [InlineData(-32, -16, -16)]
         [InlineData(15, -15, 30)]
-        public void ShouldSubtract(decimal num3, decimal num4, decimal expected)
+        public void ShouldSubtract(decimal minuend, decimal subtrahend, decimal expected)
         {
             //Arrange
             Calculator calculator = new Calculator();
 
             //Act
-            decimal actual = Calculator.Subtract(num3, num4);
+            decimal actual = Calculator.Subtract(minuend, subtrahend);
 
             //Assert
             Assert.Equal(expected, actual);
@@ -54,13 +54,13 @@ namespace CalculatorWithTests.test
         [InlineData(10, -10, -100)]
         [InlineData(-12, -12, 144)]
         [InlineData(150, -10, -1500)]
-        public void ShouldMultiply(decimal minuend, decimal subtrahend, decimal expected)
+        public void ShouldMultiply(decimal num3, decimal num4, decimal expected)
         {
             //Arrange
             Calculator calculator = new Calculator();
 
             //Act
-            decimal actual = Calculator.Multiply(minuend, subtrahend);
+            decimal actual = Calculator.Multiply(num3, num4);
 
             //Assert
             Assert.Equal(expected, actual);
@@ -92,13 +92,13 @@ namespace CalculatorWithTests.test
         [InlineData(1, 1)]
         [InlineData(2, 2)]
         [InlineData(0, 1)]
-        public void ShouldFactorial(int num9, int expected)
+        public void ShouldFactorial(int num5, int expected)
         {
             //Arrange
             Calculator calculator = new Calculator();
 
             //Act
-            decimal actual = Calculator.Factorial(num9);
+            decimal actual = Calculator.Factorial(num5);
 
             //Assert
             Assert.Equal(expected, actual);

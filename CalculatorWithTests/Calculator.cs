@@ -25,11 +25,11 @@ namespace CalculatorWithTests
             return dividend / divisor;
         }
 
-        public static decimal Factorial(decimal num9)
+        public static decimal Factorial(decimal num5)
         {
             int i;
             int fact = 1;
-            for(i = 1; i <= num9; i++)
+            for(i = 1; i <= num5; i++)
             {
                 fact = fact * i;
             }
