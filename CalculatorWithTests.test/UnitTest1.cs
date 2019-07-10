@@ -46,5 +46,25 @@ namespace CalculatorWithTests.test
             Assert.Equal(expected, actual);
         }
 
+        [Theory]
+        [InlineData(3, 2, 6)]
+        [InlineData(6, 6, 36)]
+        [InlineData(9, 9, 81)]
+        [InlineData(-10, 0, 0)]
+        [InlineData(10, -10, -100)]
+        [InlineData(-12, -12, 144)]
+        [InlineData(15, -10, -150)]
+        public void ShouldMultiply(decimal num5, decimal num6, decimal expected)
+        {
+            //Arrange
+            Calculator calculator = new Calculator();
+
+            //Act
+            decimal actual = Calculator.Multiply(num5, num6);
+
+            //Assert
+            Assert.Equal(expected, actual);
+        }
+
     }
 }
