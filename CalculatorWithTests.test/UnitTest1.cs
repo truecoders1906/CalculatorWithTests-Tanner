@@ -30,7 +30,7 @@ namespace CalculatorWithTests.test
         [InlineData(3, 2, 1)]
         [InlineData(72, 12, 60)]
         [InlineData(-99, -33, -66)]
-        [InlineData(-10, 100, -110)]
+        [InlineData(-100, 100, -110)]
         [InlineData(0, 0, 0)]
         [InlineData(-32, -16, -16)]
         [InlineData(15, -15, 30)]
@@ -54,13 +54,13 @@ namespace CalculatorWithTests.test
         [InlineData(10, -10, -100)]
         [InlineData(-12, -12, 144)]
         [InlineData(150, -10, -1500)]
-        public void ShouldMultiply(decimal num5, decimal num6, decimal expected)
+        public void ShouldMultiply(decimal minuend, decimal subtrahend, decimal expected)
         {
             //Arrange
             Calculator calculator = new Calculator();
 
             //Act
-            decimal actual = Calculator.Multiply(num5, num6);
+            decimal actual = Calculator.Multiply(minuend, subtrahend);
 
             //Assert
             Assert.Equal(expected, actual);
@@ -74,13 +74,13 @@ namespace CalculatorWithTests.test
         [InlineData(-120000, 1, -120000)]
         [InlineData(-150, 5, -30)]
         [InlineData(-200000, 1000, -200)]
-        public void ShouldDivide(decimal num7, decimal num8, decimal expected)
+        public void ShouldDivide(decimal dividend, decimal divisor, decimal expected)
         {
             //Arrange
             Calculator calculator = new Calculator();
 
             //Act
-            decimal actual = Calculator.Divide(num7, num8);
+            decimal actual = Calculator.Divide(dividend, divisor);
 
             //Assert
             Assert.Equal(expected, actual);
@@ -103,6 +103,5 @@ namespace CalculatorWithTests.test
             //Assert
             Assert.Equal(expected, actual);
         }
-
     }
 }

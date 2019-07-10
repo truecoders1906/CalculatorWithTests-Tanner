@@ -10,19 +10,19 @@ namespace CalculatorWithTests
             return num1 + num2;
         }
 
-        public static decimal Subtract(decimal num3, decimal num4)
+        public static decimal Subtract(decimal minuend, decimal subtrahend)
         {
-            return num3 - num4;
+            return minuend - subtrahend;
         }
 
-        public static decimal Multiply(decimal num5, decimal num6)
+        public static decimal Multiply(decimal num3, decimal num4)
         {
-            return num5 * num6;
+            return num3 * num4;
         }
 
-        public static decimal Divide(decimal num7, decimal num8)
+        public static decimal Divide(decimal dividend, decimal divisor)
         {
-            return num7 / num8;
+            return dividend / divisor;
         }
 
         public static decimal Factorial(decimal num9)
