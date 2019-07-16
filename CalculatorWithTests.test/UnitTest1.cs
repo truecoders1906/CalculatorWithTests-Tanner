@@ -20,7 +20,7 @@ namespace CalculatorWithTests.test
             Calculator calculator = new Calculator();
 
             //Act
-            decimal actual = Calculator.Add(num1, num2);
+            decimal actual = calculator.Add(num1, num2);
 
             //Assert
             Assert.Equal(expected, actual);
@@ -30,7 +30,7 @@ namespace CalculatorWithTests.test
         [InlineData(3, 2, 1)]
         [InlineData(72, 12, 60)]
         [InlineData(-99, -33, -66)]
-        [InlineData(-100, 100, -110)]
+        [InlineData(-100, 10, -110)]
         [InlineData(0, 0, 0)]
         [InlineData(-32, -16, -16)]
         [InlineData(15, -15, 30)]
@@ -40,7 +40,7 @@ namespace CalculatorWithTests.test
             Calculator calculator = new Calculator();
 
             //Act
-            decimal actual = Calculator.Subtract(minuend, subtrahend);
+            decimal actual = calculator.Subtract(minuend, subtrahend);
 
             //Assert
             Assert.Equal(expected, actual);
@@ -60,7 +60,7 @@ namespace CalculatorWithTests.test
             Calculator calculator = new Calculator();
 
             //Act
-            decimal actual = Calculator.Multiply(num3, num4);
+            decimal actual = calculator.Multiply(num3, num4);
 
             //Assert
             Assert.Equal(expected, actual);
@@ -71,6 +71,7 @@ namespace CalculatorWithTests.test
         [InlineData(160, 16, 10)]
         [InlineData(99, 33, 3)]
         [InlineData(0, 100000, 0)]
+        [InlineData(1, 0, 0)]
         [InlineData(-120000, 1, -120000)]
         [InlineData(-150, 5, -30)]
         [InlineData(-200000, 1000, -200)]
@@ -80,7 +81,7 @@ namespace CalculatorWithTests.test
             Calculator calculator = new Calculator();
 
             //Act
-            decimal actual = Calculator.Divide(dividend, divisor);
+            decimal actual = calculator.Divide(dividend, divisor);
 
             //Assert
             Assert.Equal(expected, actual);
@@ -98,7 +99,7 @@ namespace CalculatorWithTests.test
             Calculator calculator = new Calculator();
 
             //Act
-            decimal actual = Calculator.Factorial(num5);
+            decimal actual = calculator.Factorial(num5);
 
             //Assert
             Assert.Equal(expected, actual);

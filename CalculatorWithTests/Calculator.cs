@@ -5,27 +5,32 @@ namespace CalculatorWithTests
 {
     public class Calculator
     {
-        public static decimal Add(decimal num1, decimal num2)
+        public decimal Add(decimal num1, decimal num2)
         {
             return num1 + num2;
         }
 
-        public static decimal Subtract(decimal minuend, decimal subtrahend)
+        public decimal Subtract(decimal minuend, decimal subtrahend)
         {
             return minuend - subtrahend;
         }
 
-        public static decimal Multiply(decimal num3, decimal num4)
+        public decimal Multiply(decimal num3, decimal num4)
         {
             return num3 * num4;
         }
 
-        public static decimal Divide(decimal dividend, decimal divisor)
+        public decimal Divide(decimal dividend, decimal divisor)
         {
+            if (divisor == 0)
+            {
+                return 0;
+            }
+
             return dividend / divisor;
         }
 
-        public static decimal Factorial(decimal num5)
+        public decimal Factorial(decimal num5)
         {
             int i;
             int fact = 1;
